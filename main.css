@@ -1,0 +1,389 @@
+@import url("/simplegrid.css") all;
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono");
+@import url("font-awesome/css/font-awesome.min.css") all;
+body {
+    position: relative;
+    background-color: #333;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    color: #ddd;
+}
+
+#container>h1 {
+    font-family: 'Press Start 2P';
+    text-align: center;
+    color: #999;
+    font-size: 4em;
+    letter-spacing: 0px;
+    font-weight: 400;
+    /*Create overlap*/
+    margin: 0;
+    line-height: 0;
+    /*Animation*/
+    animation: glitch1 2.5s infinite;
+}
+
+.info {
+    text-align: center;
+    width: 60vw;
+    margin: auto;
+    margin-bottom: 5vw;
+}
+
+li {
+    margin-bottom: 0.25vmin;
+}
+
+body a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #999;
+}
+
+:target {
+    background-color: #ccc;
+}
+
+h2 {
+    text-align: center;
+    color: #ddd;
+    margin: 0px auto;
+}
+
+h3 {
+    font-weight: bolder;
+    color: #ccc;
+    margin-top: 1vw;
+    margin-bottom: 0;
+    padding-bottom: 0.25em;
+}
+
+#container a {
+    color: #999;
+    font-size: inherit;
+    margin: 10vw auto;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 0;
+}
+
+ul.fa-ul {
+    margin: 0 0 2em 0;
+    padding: 0 0 0 1.75em;
+}
+
+ul.fa-ul>li {}
+
+.fa-li {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+
+/*
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}*/
+
+@media screen and (min-width: 768px) {
+    #simple {
+        display: none;
+    }
+    body a:hover {
+        color: #eee;
+    }
+    #container {
+        margin: 10vmin auto;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    h3 {
+        font-size: 120%;
+    }
+    .longread{
+      margin: auto 10em;
+    }
+}
+
+@media (max-width: 767px), not screen and (min-width: 768px) {
+    #container>h1 {
+        font-size: 10vw;
+    }
+    #container {
+        margin: 8vmin auto;
+    }
+    h2 {
+        font-size: 6vmin;
+    }
+    h3 {
+        font-size: 5vw;
+        margin-bottom: 1vmin;
+        padding-bottom: 1vmin;
+    }
+    .content {
+        font-size: 5vw;
+    }
+    #easter {
+        display: none;
+    }
+    #simple {
+        display: inherit;
+    }
+    li {
+        margin-bottom: 1.5vw;
+    }
+    body a:hover {
+        color: inherit;
+    }
+    .longread{
+      font-size: 3.5vw;
+    }
+    .longread > h2{
+      font-size: 5vw;
+    }
+    .longread > h3{
+      font-size: 4vw;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px), (max-width: 480px) {
+    #container {
+        margin: 8vw auto;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    h3 {
+        font-size: 4vw;
+        margin-bottom: 1vmin;
+        padding-bottom: 1vmin;
+    }
+    .content {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 480px) and (orientation:portrait) {
+    h2 {
+        font-size: 7vmin;
+    }
+    h3 {
+        font-size: 6vmin;
+        margin-bottom: 1vmin;
+        padding-bottom: 1vmin;
+    }
+    .content {
+        font-size: 5vmin;
+    }
+}
+
+.longread {
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.longread > h3 + p{
+  margin-top: 0;
+}
+
+#container>h1:nth-child(2) {
+    color: #67f3da;
+    animation: glitch2 5s infinite;
+}
+
+#container>h1:nth-child(3) {
+    color: #f16f6f;
+    animation: glitch3 5s infinite;
+}
+
+.grid-pad {
+    padding-top: 0px;
+}
+
+.links {
+    text-align: center;
+    margin: 0;
+}
+
+.help {
+    text-align: center;
+    position: relative;
+    color: #777;
+    display: block;
+}
+
+
+/*Keyframes*/
+
+@keyframes glitch1 {
+    0% {
+        transform: none;
+        opacity: 1;
+    }
+    7% {
+        transform: skew(-0.5deg, -0.9deg);
+        opacity: 0.75;
+    }
+    10% {
+        transform: none;
+        opacity: 1;
+    }
+    27% {
+        transform: none;
+        opacity: 1;
+    }
+    30% {
+        transform: skew(0.8deg, -0.1deg);
+        opacity: 0.75;
+    }
+    35% {
+        transform: none;
+        opacity: 1;
+    }
+    52% {
+        transform: none;
+        opacity: 1;
+    }
+    55% {
+        transform: skew(-1deg, 0.2deg);
+        opacity: 0.75;
+    }
+    50% {
+        transform: none;
+        opacity: 1;
+    }
+    72% {
+        transform: none;
+        opacity: 1;
+    }
+    75% {
+        transform: skew(0.4deg, 1deg);
+        opacity: 0.75;
+    }
+    80% {
+        transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes glitch2 {
+    0% {
+        transform: none;
+        opacity: 0.25;
+    }
+    7% {
+        transform: translate(-2px, -3px);
+        opacity: 0.5;
+    }
+    10% {
+        transform: none;
+        opacity: 0.25;
+    }
+    27% {
+        transform: none;
+        opacity: 0.25;
+    }
+    30% {
+        transform: translate(-5px, -2px);
+        opacity: 0.5;
+    }
+    35% {
+        transform: none;
+        opacity: 0.25;
+    }
+    52% {
+        transform: none;
+        opacity: 0.25;
+    }
+    55% {
+        transform: translate(-5px, -1px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: none;
+        opacity: 0.25;
+    }
+    72% {
+        transform: none;
+        opacity: 0.25;
+    }
+    75% {
+        transform: translate(-2px, -6px);
+        opacity: 0.5;
+    }
+    80% {
+        transform: none;
+        opacity: 0.25;
+    }
+    100% {
+        transform: none;
+        opacity: 0.25;
+    }
+}
+
+@keyframes glitch3 {
+    0% {
+        transform: none;
+        opacity: 0.25;
+    }
+    7% {
+        transform: translate(2px, 3px);
+        opacity: 0.5;
+    }
+    10% {
+        transform: none;
+        opacity: 0.25;
+    }
+    27% {
+        transform: none;
+        opacity: 0.25;
+    }
+    30% {
+        transform: translate(5px, 2px);
+        opacity: 0.5;
+    }
+    35% {
+        transform: none;
+        opacity: 0.25;
+    }
+    52% {
+        transform: none;
+        opacity: 0.25;
+    }
+    55% {
+        transform: translate(5px, 1px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: none;
+        opacity: 0.25;
+    }
+    72% {
+        transform: none;
+        opacity: 0.25;
+    }
+    75% {
+        transform: translate(2px, 6px);
+        opacity: 0.5;
+    }
+    80% {
+        transform: none;
+        opacity: 0.25;
+    }
+    100% {
+        transform: none;
+        opacity: 0.25;
+    }
+}
